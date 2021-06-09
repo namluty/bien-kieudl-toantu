@@ -5,16 +5,16 @@
     <title>app convert money</title>
 </head>
 <body>
-    <input type="number" id="soTien">
-      <select name="" id="from">
-       <option value="1">VNĐ</option>
-       <option value="23000">USD</option>
-      </select>
-      <select name="" id="to">
-       <option value="1">VNĐ</option>
-       <option value="23000">USD</option>
-      </select>
-    <button type="button" onclick="chuyendoi()">Convert</button>
-    <script src="convert.js"> </script>
+<script>
+    let vatly; let hoahoc; let sinhhoc;
+    vatly = +prompt("nhap diem mon vat ly: ");
+    hoahoc = +prompt("nhap diem mon hoa hoc: ");
+    sinhhoc = +prompt("nhap diem sinh hoc: ");
+    let tongdiem = vatly + hoahoc + sinhhoc;
+    let trungbinh = tongdiem/3;
+    document.write("tong diem la: "+ tongdiem+"<br>");
+    document.write("diem trung binh la: "+ trungbinh);
+
+</script>
 </body>
 </html>

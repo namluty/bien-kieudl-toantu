@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra năm nhuận</title>
+</head>
+<body>
+<script>
+  let year = parseInt(prompt("Enter a year"));
+  if (year%4 ==0) {
+      if (year%100 ==0 && year%400==0) {
+    document.write("Kết quả Nhuận: "+year);
+     } else {
+    document.write("Kết quả Không Nhuận: "+year);
+  }
+</script>
+</body>
+</html>

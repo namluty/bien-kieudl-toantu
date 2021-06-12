@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do You Marry Me?</title>
+</head>
+<body>
+<h1 style="text-align: center;color: orangered"> DO YOU MARRY ME?</h1>
+<button id="a" onclick="like()" style="position:absolute;background-color: skyblue;left:200px;top:100px;height: 18px">YES</button>
+<button id="b" onmouseover="run()" style="position: absolute;left:50px;top:100px">HAHA</button>
+<script>
+    function like(){
+        alert("Cưới đi thôi =))")
+    }
+    function run(){
+        let c= Math.random()* window.innerWidth;
+        let d= Math.random()*window.innerHeight;
+        document.getElementById("b").style.left= +c + 'px';
+        document.getElementById("b").style.top= +c + 'px';
+    }
+</script>
+</body>
+</html>

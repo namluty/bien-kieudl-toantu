@@ -5,103 +5,26 @@
     <title>Bài tập tạo Form Khách Hàng</title>
 </head>
 <body>
-<h1>Market Research Survey</h1>
-<h5>Please take a few moments to complete this saticsfaction survey </h5>
-<div>
-  <div><b>What is your age range?<br>
-    <select style="width: 400px; text-align: left">
-      <option value="tuoi">18-24</option>
-      <option value="tuoi">25-34</option>
-      <option value="tuoi">35-50</option>
-      <option value="tuoi">50+</option>
-    </select>
-  </div><br>
-  <div>What is your yearly income range?<br>
-    <select style="width: 400px; text-align: left">
-     <option value="thunhap">$0 - $25,000</option>
-     <option value="thunhap">$25,001 - $50,000</option>
-     <option value="thunhap">$50,001 - $100,000</option>
-     <option value="thunhap">$100,000+</option>
-    </select>
-  </div><br>
-  <div>Gender Identity<br>
-      <input type="radio"name="gender" value="male"checked>Male<br>
-      <input type="radio"name="gender" value="female">Female<br>
-      <input type="radio"name="gender" value="nonbinary">Nonbinary<br>
-      <input type="radio"name="gender" value="other">Other<br>
-      <input style="margin-left: 20px"type="text">
-  </div><br>
-  <div>Which of the following products have your purchased in the last 2 months. Please check all that apply.<br>
-    <form>
-      <input type="checkbox" value="product">Product 1<br>
-      <input type="checkbox" value="product">Product 2<br>
-      <input type="checkbox" value="product">Product 3<br>
-    </form>
-  </div><br>
-  <div>How often would you use our new product?<br>
-    <input type="radio" name="day" value="day">Daily<br>
-    <input type="radio" name="day" value="week">Weekly<br>
-    <input type="radio" name="day" value="month">Monthly<br>
-  </div><br>
-  <div>What would you pay for the new product?<br>
-      $
-      <input style="width: 50px" type="text"> . <input style="width: 20px" type="text"><br>
-      <h4 style="display: block; margin: auto; padding-left: 18px" >Dollars Cents</h4>
-  </div><br>
-  <div>What features would you like to see in the new product.<br>
-      <textarea rows="6"cols="314"></textarea>
-  </div><br>
-  <div>Please rate your level of agreement with the following sratements.<br>
-      <style>
-          table {
-              font-family: arial, sans-serif;
-              border-collapse: collapse;
-              width: 100%;
-          }
-          td, th {
-              border: 1px solid #dddddd;
-              text-align: center;
-              padding: 8px;
-          }
-          tr:nth-child(even) {
-              background-color: #dddddd;
-          }
-      </style>
-      <table>
-          <tr>
-              <th colspan="2"></th>
-              <th>Strongly Disagree</th>
-              <th>Disagree</th>
-              <th>Agree</th>
-              <th>Strongly Agree</th>
-          </tr>
-          <tr>
-              <td colspan=""></td>
-              <td>Our products are priced</td>
-              <td><input type="radio" style="margin: auto"><br>1</td>
-              <td><input type="radio" style="margin: auto"><br>2</td>
-              <td><input type="radio" style="margin: auto"><br>3</td>
-              <td><input type="radio" style="margin: auto"><br>4</td>
-          </tr>
-          <tr>
-              <td colspan=""></td>
-          <td>Our products are high quality</td>
-              <td><input type="radio" style="margin: auto"><br>1</td>
-              <td><input type="radio" style="margin: auto"><br>2</td>
-              <td><input type="radio" style="margin: auto"><br>3</td>
-              <td><input type="radio" style="margin: auto"><br>4</td>
-          </tr>
-          <tr>
-              <td colspan=""></td>
-              <td>You would recommend our product to a friend or cowoker</td>
-              <td><input type="radio" style="margin: auto"><br>1</td>
-              <td><input type="radio" style="margin: auto"><br>2</td>
-              <td><input type="radio" style="margin: auto"><br>3</td>
-              <td><input type="radio" style="margin: auto"><br>4</td>
-          </tr>
-      </table><br>
-      <input style= type="submit">
-  </div>
-</div>
+<input type="number" id="abc">
+
+<select name="" id="a">
+    <option value="1">VND</option>
+    <option value="23000">USD</option>
+</select>
+<select id="b">
+    <option value="1">VND</option>
+    <option value="23000">USD</option>
+</select>
+<button onclick="oshite()">Convert</button><br>
+<p id="q">số tiền</p>
+<script>
+    function oshite(){
+        let a = +document.getElementById('abc').value;
+        let b = +document.getElementById('a').value;
+        let c = +document.getElementById('b').value;
+        let tigia = a * (b / c);
+        document.getElementById('q').innerText = tigia
+    }
+</script>
 </body>
 </html>
